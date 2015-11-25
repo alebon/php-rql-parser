@@ -28,18 +28,21 @@ class MongoOdm implements FixtureInterface
     public function load(ObjectManager $manager)
     {
         $doc = new Foo;
+        $doc->id = 'one';
         $doc->name = 'My First Sprocket';
         $doc->count = 10;
 
         $manager->persist($doc);
 
         $wheel = new Foo;
+        $wheel->id = 'two';
         $wheel->name = 'The Third Wheel';
         $wheel->count = 3;
 
         $manager->persist($wheel);
 
         $widget = new Foo;
+        $widget->id = 'three';
         $widget->name = 'A Simple Widget';
         $widget->count = 100;
 

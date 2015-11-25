@@ -17,9 +17,9 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 class Foo
 {
     /**
-     * @ODM\Id
+     * @ODM\Id(strategy="NONE")
      */
-    private $id;
+    public $id;
 
     /**
      * @ODM\String

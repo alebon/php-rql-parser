@@ -285,6 +285,18 @@ class MongoOdmTest extends \PHPUnit_Framework_TestCase
                     ['name' => 'A Simple Widget', 'count' => 100],
                 ],
             ],
+            'eq() by id' => [
+                'eq(id,one)',
+                [
+                    ['name' => 'My First Sprocket', 'count' => 10],
+                ],
+            ],
+            'like() by id' => [
+                'like(id,*ne)',
+                [
+                    ['name' => 'My First Sprocket', 'count' => 10],
+                ],
+            ],
         );
     }
 
